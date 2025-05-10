@@ -9,7 +9,7 @@ const connectToDatabase = async () => {
   console.log("Connecting to MongoDB...");
   try {
     console.log(DB_URI)
-    await mongoose.connect("mongodb://127.0.0.1:27017/myapp");
+    await mongoose.connect(DB_URI);
     console.log("Connected to MongoDB");
   } catch (err) {
     console.error("Failed to connect to MongoDB", err);
